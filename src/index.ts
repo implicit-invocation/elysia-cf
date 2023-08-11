@@ -1,7 +1,14 @@
+import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
+import { cfEnv, handleWorker } from "./plugins/cf";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+type Env = {
+  TEST: string;
+};
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+const app = new Elysia({ aot: false }).use(swagger()).use(cfEnv<Env>());
+app.get("/", (c) => {
+  return "Hello Elysia. " + c.env.TEST;
+});
+
+export default handleWorker(app);

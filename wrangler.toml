@@ -1,0 +1,4 @@
+name = "elysia-cf-worker"
+compatibility_date = "2023-01-01"
+[vars]
+TEST = "Lorem ipsum"
