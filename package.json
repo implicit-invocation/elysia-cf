@@ -9,7 +9,7 @@
     "@elysiajs/cors": "^0.6.0",
     "@elysiajs/jwt": "^0.6.3",
     "@elysiajs/swagger": "^0.6.0",
-    "elysia": "0.6.9"
+    "elysia": "^0.6.11"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230807.0",
