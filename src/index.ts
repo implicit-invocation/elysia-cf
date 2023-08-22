@@ -8,6 +8,7 @@ const app = new Elysia({ aot: false })
   .use(swagger())
   .use(cors())
   .use(cfEnv<Env>());
+
 app.get("/", (c) => {
   return "Hello Elysia. " + c.env.TEST;
 });
