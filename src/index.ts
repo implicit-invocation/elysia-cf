@@ -1,6 +1,6 @@
-import cors from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Elysia } from "elysia";
+import cors from "./patch/cors";
 import { cfEnv, handleWorker } from "./plugins/cf";
 import { Env } from "./type";
 
